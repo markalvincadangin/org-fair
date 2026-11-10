@@ -46,7 +46,7 @@ class EventTile extends StatelessWidget {
         : event.venue;
     // TODO 9: Show cancelled events differently:
     //   - the title with TextDecoration.lineThrough
-    //   - a trailing Chip with the text 'Cancelled'
+    //   - a trailing Chip with the text 'Canceled'
     //   - the leading icon Icons.event_busy in colors.error
     // Normal events keep the code below. (Hint: build the three parts with
     // conditional expressions: event.cancelled ? ... : ...)
@@ -62,7 +62,7 @@ class EventTile extends StatelessWidget {
             : null,
       ),
       subtitle: Text('${formatWhen(event.startsAt)}\n$where'),
-      trailing: event.cancelled ? const Chip(label: Text('Cancelled')) : null,
+      trailing: event.cancelled ? const Chip(label: Text('Canceled')) : null,
       isThreeLine: true,
     );
   }
